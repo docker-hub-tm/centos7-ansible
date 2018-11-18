@@ -7,7 +7,12 @@ RUN set -x && \
     yum clean all && \
     yum update -y && \
     yum install -y epel-release git && \
-    yum -y install ansible 
+    yum -y install ansible && \
+    yum -y install expect python-devel python-pip && \
+    pip install --upgrade pip && pip install --upgrade setuptools && \
+    pip install ansible-lint
+
+ADD .ansible-lint-rules /
 
 ENV LANG="ja_JP.UTF-8" \
     LANGUAGE="ja_JP:ja" \
