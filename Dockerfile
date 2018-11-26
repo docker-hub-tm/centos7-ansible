@@ -12,8 +12,6 @@ RUN set -x && \
     pip install git+https://github.com/ansible/ansible.git@devel && \
     pip install ansible-lint
 
-ADD .ansible-lint-rules /
-
 ENV LANG="ja_JP.UTF-8" \
     LANGUAGE="ja_JP:ja" \
     LC_ALL="ja_JP.UTF-8"
