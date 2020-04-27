@@ -1,9 +1,6 @@
 FROM centos:7
 
 RUN set -x && \
-    rm -f /etc/rpm/macros.image-language-conf && \
-    sed -i '/^override_install_langs=/d' /etc/yum.conf && \
-    yum -y reinstall glibc-common && \
     yum clean all && \
     yum update -y && \
     yum install -y epel-release git && \
