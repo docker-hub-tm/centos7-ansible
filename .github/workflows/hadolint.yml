@@ -1,0 +1,13 @@
+---
+name: Lint
+on: push
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Dockerfile lint
+        uses: brpaz/hadolint-action@master
