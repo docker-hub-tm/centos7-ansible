@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM centos:7
 
 RUN set -x && \
     rm -f /etc/rpm/macros.image-language-conf && \
