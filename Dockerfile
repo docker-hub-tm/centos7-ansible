@@ -6,5 +6,4 @@ RUN set -x && \
     yum install -y epel-release git && \
     yum -y install expect python-devel python-pip && \
     pip install --upgrade pip && pip install --upgrade setuptools && \
-    pip install ansible && \
-    pip install ansible-lint
+    pip install ansible==2.9.6
